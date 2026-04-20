@@ -1,13 +1,4 @@
-# =============================================================================
-# Clase Nodo: Estructura fundamental para la cola de prioridad.
-# A diferencia del nodo simple, este incluye un atributo 'prioridad'
-# para determinar su posición relativa en la cola.
-# =============================================================================
-class Nodo:
-    def __init__(self, valor: str, prioridad: int):
-        self.valor = valor
-        self.prioridad = prioridad
-        self.siguiente = None
+from nodo import Nodo
 
 
 # =============================================================================

@@ -1,11 +1,4 @@
-# =============================================================================
-# Clase Nodo: Representa la unidad básica de la estructura.
-# Contiene el valor almacenado y el puntero al siguiente nodo en la memoria.
-# =============================================================================
-class Nodo:
-    def __init__(self, valor: str):
-        self.valor = valor
-        self.siguiente = None
+from nodo import Nodo
 
 
 # =============================================================================
