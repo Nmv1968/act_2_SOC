@@ -1,6 +1,6 @@
 # =============================================================================
 # Clase Nodo: Estructura fundamental para la cola de prioridad.
-# A diferencia del nodo simple, este incluye un atributo 'prioridad' 
+# A diferencia del nodo simple, este incluye un atributo 'prioridad'
 # para determinar su posición relativa en la cola.
 # =============================================================================
 class Nodo:
@@ -11,7 +11,7 @@ class Nodo:
 
 
 # =============================================================================
-# Clase ColaPrioridad: Estructura donde los elementos se organizan de 
+# Clase ColaPrioridad: Estructura donde los elementos se organizan de
 # mayor a menor prioridad antes de ser atendidos.
 # =============================================================================
 class ColaPrioridad:
@@ -21,8 +21,9 @@ class ColaPrioridad:
         self.length = 0
 
     # Lógica Enqueue de Prioridad:
+    # Convención: mayor número = mayor prioridad (5 = crítico, 1 = bajo)
     # No inserta al final. Recorre la lista buscando el lugar adecuado
-    # según el valor de 'prioridad'. Los elementos con mayor prioridad 
+    # según el valor de 'prioridad'. Los elementos con mayor prioridad
     # se desplazan hacia el frente de la cola.
     def enqueue(self, valor: str, prioridad: int):
         nuevo = Nodo(valor, prioridad)
@@ -43,7 +44,7 @@ class ColaPrioridad:
     # Remueve el elemento que quedó con mayor prioridad (en el frente).
     def dequeue(self):
         if self.is_empty():
-            print("⚠️ Cola vacía")
+            print("⚠️ Underflow: cola de alertas críticas vacía.")
             return None
         valor = self.frente.valor
         self.frente = self.frente.siguiente
@@ -64,4 +65,3 @@ class ColaPrioridad:
         while actual:
             yield actual.valor, actual.prioridad
             actual = actual.siguiente
-
