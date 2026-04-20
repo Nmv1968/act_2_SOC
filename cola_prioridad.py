@@ -47,9 +47,10 @@ class ColaPrioridad:
             print("⚠️ Underflow: cola de alertas críticas vacía.")
             return None
         valor = self.frente.valor
+        prioridad = self.frente.prioridad
         self.frente = self.frente.siguiente
         self.length -= 1
-        return valor
+        return valor, prioridad
 
     # Comprueba si existen elementos en la cola.
     def is_empty(self):

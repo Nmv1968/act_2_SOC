@@ -92,7 +92,8 @@ def atender_siguiente_alerta(
 ) -> str:
     # Primero se revisa si hay algo urgente (Cola de Prioridad)
     if not cola_prioridad.is_empty():
-        return f"Atendiendo alerta crítica: {cola_prioridad.dequeue()} 🚨"
+        valor, prioridad = cola_prioridad.dequeue()
+        return f"Atendiendo alerta crítica: {valor} (P{prioridad}) 🚨"
     # Si no hay urgencias, se atiende la cola normal (FIFO)
     elif not cola_simple.is_empty():
         return f"Atendiendo alerta normal: {cola_simple.dequeue()} 🔈"
