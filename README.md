@@ -10,6 +10,7 @@ Mini proyecto en Python que gestiona alertas usando dos tipos de colas:
 - `main.py`: módulo principal con menú interactivo de consola.
 - `cola_simple.py`: implementación de una cola simple basada en nodos.
 - `cola_prioridad.py`: implementación de una cola de prioridad basada en nodos.
+- `nodo.py`: clase Nodo compartida para ambas implementaciones de cola.
 
 ## Cómo ejecutar
 
